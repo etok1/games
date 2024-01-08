@@ -1,4 +1,5 @@
 const cardsContainer = document.querySelector(".main__allNews-cards");
+
 document.addEventListener("DOMContentLoaded", function () {
   products.forEach((product) => {
     displayCard(product);
@@ -11,7 +12,7 @@ function displayCard(product) {
   card.setAttribute("data-category", `${product.category}`);
   card.innerHTML = `
     <div class="main__allNews-card-image">
-        <img src="${product.img}" alt="${product.heading}"/>
+        <img class="animate-on-scroll" src="${product.img}" alt="${product.heading}"/>
     </div>
     <div class="main__allNews-card-info">
         <div class="main__allNews-card-info-date">

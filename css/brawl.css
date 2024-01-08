@@ -1,0 +1,60 @@
+:root {
+  --white-text-color: #fff;
+  --body-color: #4e3636;
+  --header-color: #111;
+  --body-bg-color: #000;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  font-family: "PT Sans", sans-serif;
+}
+
+.brawl-wrapper {
+  background-color: var(--body-color);
+}
+
+header {
+  background-color: var(--header-color);
+}
+
+.main__trailer {
+  background-image: url("https://dotesports.com/wp-content/uploads/2021/06/09044628/brawlstarsoneyearanniv.jpg");
+}
+
+.main__screenshots {
+  margin-top: 50px;
+}
+
+.main__question {
+  margin-top: 0;
+}
+
+.main__watch-container {
+  position: relative;
+}
+
+.first {
+  position: absolute;
+  left: 33%;
+}
+
+.second {
+  right: 0;
+  top: 50%;
+}
+
+.third {
+  top: 500%;
+  left: 65%;
+}
+
+.fourth {
+  top: 550%;
+  left: 15%;
+}
+
+.fifth {
+  top: -15%;
+  left: 5%;
+}

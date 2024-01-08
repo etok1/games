@@ -1,27 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Sulphur+Point:wght@300;400;700&display=swap");
 
 :root {
+  --black-color: #000;
   --main-background-color: #1c1c1c;
   --header-background-color: #111111;
   --news-background-color: #262626;
   --arrow-fill-color: #5ea2e0;
+  --footer-license-color: #d3c7b5;
+  --color-blue: #2d75b6;
+  --color-dark-blue: #2868a0;
+  --color-white: #fff;
 }
 
 * {
   font-family: "PT Sans", sans-serif;
   text-decoration: none;
+  box-sizing: border-box;
   outline: none;
   border: none;
   text-decoration-color: rgb(230, 230, 230);
 }
 
 body {
-  background-color: var(--main-background-color);
+  background-color: var(--black-color);
+}
+
+.wrapper {
+  max-width: 1700px;
+  margin: 0 auto;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.index-wrapper {
+  background-color: var(--main-background-color);
 }
 
 header {
@@ -47,6 +62,11 @@ nav {
   color: rgb(230, 230, 230);
   padding: 10px;
   z-index: 100;
+}
+
+.header__container i {
+  display: none;
+  color: var(--color-white);
 }
 
 .header__nav-list {
@@ -149,6 +169,10 @@ nav {
   cursor: pointer;
 }
 
+.fa-bars {
+  display: none;
+}
+
 .header__media img:nth-child(1):hover {
   content: url(../assets/24.svg);
 }
@@ -158,20 +182,34 @@ nav {
 .header__media img:nth-child(3):hover {
   content: url(../assets/28.svg);
 }
+
+@media (max-width: 767px) {
+  .header__container i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__media,
+  nav {
+    display: none;
+  }
+}
 /* main */
 .main__play {
-  height: 604px;
-  background-position: 50%;
-  background-image: url(../assets/1.png);
-  background-repeat: no-repeat;
+  height: 845px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://www.innersloth.com/wp-content/uploads/2023/10/indie_promo_169.png")
+      center/cover no-repeat;
 }
 
 .main__play h2 {
-  padding-top: 19%;
+  padding-top: 29%;
   padding-left: 5%;
-  color: #fff;
+  color: var(--color-white);
   font-weight: bold;
   font-size: 64px;
+  text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
+    1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
 }
 
 .main__games-our {
@@ -184,17 +222,48 @@ nav {
 
 .main__games-our-kind {
   width: 271px;
-  height: 160px;
+  height: 165px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #303030;
-  padding: 20px;
+  object-fit: contain;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
 
 .main__games-our-kind:hover {
-  transform: scale(1.1);
+  background-color: #3030308e;
+  box-shadow: 2px 3px 4px 4px rgba(39, 39, 39, 0.123);
 }
+
+.main__games-our-kind img {
+  padding: 20px;
+}
+
+@media (max-width: 1440px) {
+  .main__play {
+    height: 623px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main__play {
+    height: 623px;
+  }
+  .main__play h2 {
+    font-size: 41px;
+  }
+  .main__games-our {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .main__games-our-kind {
+    width: 90%;
+  }
+}
+
 /* news */
 
 .main__games-news {
@@ -203,13 +272,14 @@ nav {
 .main__games-news-wrapper {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  gap: 50px;
 }
 
 .main__games-news p {
   font-size: 15px;
-  color: #fff;
+  color: var(--color-white);
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -221,8 +291,18 @@ nav {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 15px;
+}
 
-  color: #fff;
+.main__games-news-head p a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-white);
+  transition: all 500ms ease-in-out;
+}
+
+.main__games-news-head p a:hover {
+  text-decoration: 2px underline var(--color-dark-blue);
 }
 
 .main__games-news-heads {
@@ -233,6 +313,7 @@ nav {
 }
 
 .main__games-news-heads h1 {
+  color: var(--color-white);
   font-size: 36px;
   font-weight: bold;
 }
@@ -240,7 +321,12 @@ nav {
 .main__games__news-line {
   width: 101px;
   height: 3px;
-  background-color: #ffffff;
+  background-color: var(--color-white);
+}
+
+.main__games-news-new {
+  min-width: 345px;
+  min-height: 343px;
 }
 
 .main__games-news-new {
@@ -250,10 +336,16 @@ nav {
   gap: 15px;
 }
 
+.main__games-our-kind {
+  overflow: hidden;
+  border-radius: 11px;
+}
+
 .main__games-news-new img {
   width: 370px;
   height: 223px;
   border-radius: 11px;
+  object-fit: cover;
 }
 
 .main__games-news-new-date {
@@ -269,27 +361,54 @@ nav {
   background-color: #c61111;
   border-radius: 6px;
   padding: 5px;
+  transition: all 500ms ease-in-out;
+  cursor: pointer;
+}
+
+.main_games-name:hover {
+  background-color: #a00e0e;
 }
 
 .main__games-news-new-date p {
-  color: white;
+  color: var(--color-white);
   font-weight: 600;
   text-transform: capitalize;
 }
 
 .main__games-news-new h3 {
+  font-family: "Sofia Sans Condensed", sans-serif;
+  line-height: 1.3;
   font-size: 32px;
-  color: #fff;
+  color: var(--color-white);
   font-weight: 600;
   line-height: 35px;
 }
+
+@media (max-width: 767px) {
+  .main__games-news-wrapper {
+    width: 90%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .main__games-news-new {
+    width: 90%;
+    margin-bottom: 60px;
+    border-bottom: 2px solid var(--black-color);
+  }
+  .main__games-news-new img {
+    width: 100%;
+    height: 80%;
+  }
+}
 /* team */
 .main__team {
-  margin-top: 50px;
+  margin-top: 100px;
   height: 471px;
-  background-image: url(../assets/10.png);
-  background-repeat: no-repeat;
-  background-position: 50%;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://www.innersloth.com/wp-content/uploads/2021/08/amongus_insideinnersloth-e1629741581912.png")
+      center/cover no-repeat;
 }
 
 .main__team-container {
@@ -300,35 +419,48 @@ nav {
   padding-top: 13%;
   align-items: flex-start;
   font-weight: bold;
-  color: #fff;
+  color: var(--color-white);
   display: flex;
   flex-direction: column;
 }
 
 .main__team-meat h1 {
+  text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
+    1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
+  color: var(--color-white);
   font-size: 42px;
   margin-bottom: 20px;
 }
 .main__team-meat p {
+  color: var(--color-white);
   font-size: 22px;
   margin-bottom: 25px;
+  text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
+    1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
 }
 
 .main__team-meat button {
-  background-color: #2d75b6;
+  background-color: var(--color-blue);
   padding: 15px 35px;
   border-radius: 35px;
   font-size: 22px;
   font-weight: 600;
-  color: #fff;
+  color: var(--color-white);
   cursor: pointer;
+  transition: background-color 300ms ease-in-out;
 }
+.main__team-meat button:hover {
+  border-color: var(--color-blue);
+  background-color: var(--color-dark-blue);
+}
+
 /* shop */
 .main__shop {
+  background-size: cover;
   height: 471px;
-  background-image: url(../assets/11.png);
-  background-repeat: no-repeat;
-  background-position: 50%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://www.innersloth.com/wp-content/uploads/2021/08/banner_merch.png")
+      center/cover no-repeat;
 }
 
 .main__shop-container {
@@ -338,40 +470,56 @@ nav {
 .main__shop-info {
   padding-top: 13%;
   font-weight: bold;
-  color: #fff;
+  color: var(--color-white);
   display: flex;
   flex-direction: column;
 }
 
 .main__shop-info h1 {
+  text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
+    1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
   font-size: 48px;
   margin-bottom: 20px;
 }
 .main__shop-info p {
+  text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
+    1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
+  color: var(--color-white);
   font-size: 22px;
   margin-bottom: 25px;
 }
 
 .main__shop-info button {
   width: fit-content;
-  background-color: #2d75b6;
+  background-color: var(--color-blue);
   padding: 15px 35px;
   border-radius: 35px;
   font-size: 22px;
   font-weight: 600;
-  color: #fff;
+  color: var(--color-white);
   cursor: pointer;
+  transition: background-color 300ms ease-in-out;
+}
+.main__shop-info button:hover {
+  border-color: var(--color-blue);
+  background-color: var(--color-dark-blue);
+}
+@media (max-width: 767px) {
+  .main__team-meat,
+  .main__shop-info {
+    padding-left: 5%;
+  }
 }
 /* email */
+
 .main__question-container {
   display: flex;
   flex-direction: row;
-  max-width: 1440px;
+  max-width: 1700px;
 }
 .main__question-faq {
   font-family: "Sulphur Point", sans-serif;
-  height: 266px;
-  width: 838px;
+  width: 60%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -387,34 +535,38 @@ nav {
 .main__question-faq-btn h2 {
   font-size: 34px;
   font-weight: bold;
-  color: #fff;
+  color: var(--color-white);
 }
 
 .main__question-faq-btn button {
   margin-top: 25px;
   width: fit-content;
   padding: 10px 55px;
-  color: #2d75b6;
-  background-color: #fff;
+  color: var(--color-blue);
+  background-color: var(--color-white);
   border-radius: 25px;
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
+  transition: all 500ms ease-in-out;
+}
+
+.main__question-faq-btn button:hover {
+  border-color: var(--color-blue);
+  color: var(--arrow-fill-color);
 }
 
 .main__question-mail {
-  padding-left: 50px;
-  margin-top: 25px;
+  padding: 50px;
   font-family: "Sulphur Point", sans-serif;
   background-color: #1c1c1c;
-  width: 613px;
-  height: 266px;
+  width: 40%;
 }
 
 .main__question-mail h2 {
   font-size: 34px;
   font-weight: bold;
-  color: #fff;
+  color: var(--color-white);
 }
 
 .main__question-mail-input-form {
@@ -422,12 +574,14 @@ nav {
   position: relative;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .main__question-mail-input-form input {
   width: 480px;
   height: 54px;
-  border: 1px solid #fff;
+  border: 1px solid var(--color-white);
   border-radius: 25px 0 0 25px;
   font-size: 35px;
   background-color: transparent;
@@ -438,7 +592,7 @@ nav {
   top: -15px;
   right: 70%;
   position: absolute;
-  color: white;
+  color: var(--color-white);
   font-size: 20px;
   font-weight: bold;
   background-color: #1c1c1c;
@@ -455,10 +609,32 @@ nav {
   cursor: pointer;
 }
 
+@media (max-width: 767px) {
+  .main__question-container {
+    flex-direction: column;
+  }
+  .main__question-faq,
+  .main__question-mail {
+    width: 100%;
+  }
+  .main__question-mail-input-form input {
+    width: 100%;
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: opacity 500ms ease-in-out, transform 0.5s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* footer */
 footer {
-  background-color: #000;
-  margin-top: 50px;
+  background-color: var(--header-background-color);
   padding: 50px 65px;
   font-family: "Sulphur Point", sans-serif;
 }
@@ -477,7 +653,7 @@ footer {
 }
 
 .footer__links-link ul h1 {
-  color: #fff;
+  color: var(--color-white);
   text-transform: uppercase;
   font-size: 14px;
   margin-bottom: 20px;
@@ -549,6 +725,13 @@ footer {
   gap: 10px;
   color: #ffffffd2;
 }
+
+.footer__license h1,
+p {
+  font-size: 13px;
+  color: var(--footer-license-color);
+}
+
 .footer__license-terms ul {
   display: flex;
   flex-direction: row;
@@ -557,5 +740,28 @@ footer {
 }
 .footer__license-terms ul li {
   text-transform: capitalize;
+  font-size: 14px;
+  color: var(--footer-license-color);
 }
 /*  */
+
+@media (max-width: 767px) {
+  .footer__links {
+    flex-wrap: wrap;
+  }
+  .footer__links-link {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .footer__links-media {
+    margin-top: -15%;
+  }
+  .footer__license {
+    align-items: flex-start;
+  }
+  .footer__license-terms ul {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

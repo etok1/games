@@ -1,0 +1,443 @@
+:root {
+  --body-color: #000;
+  --header-color: #111;
+  --red-color: #c61111;
+  --white-color: #fff;
+  --whiter-color: #ffffffa2;
+  --color-blue: #2d75b6;
+  --color-dark-blue: #2868a0;
+  --color-beige: #d3c7b5;
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+header {
+  background-color: var(--header-color);
+}
+
+.header__nav-dropdown {
+  background-color: var(--header-color);
+}
+
+.main__trailer {
+  height: 845px;
+  background-image: url("https://www.innersloth.com/wp-content/uploads/2023/10/thefungle-nowordart-1.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__trailer-watch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.main__trailer-watch button {
+  padding: 15px 45px;
+  width: fit-content;
+  border-radius: 35px;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: var(--white-color);
+  font-weight: 700;
+  background-color: var(--color-blue);
+  cursor: pointer;
+  transition: background-color 300ms ease-in-out;
+}
+
+.main__trailer-watch button:hover {
+  border-color: var(--color-blue);
+  background-color: var(--color-dark-blue);
+}
+
+.main__platform {
+  margin-top: 70px;
+}
+
+.main__platform-all {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+@media (max-width: 1440px) {
+  .main__trailer {
+    height: 623px;
+  }
+}
+/* video */
+.main__watch {
+  margin-top: 50px;
+}
+
+.main__watch-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.main__watch-heading h1 {
+  font-size: 32px;
+  font-weight: bold;
+
+  color: var(--white-color);
+}
+
+.main__watch-heading p {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  font-size: 27px;
+  color: var(--white-color);
+}
+
+.main__games__news-line {
+  background-color: var(--red-color);
+}
+
+.main__shop {
+  margin-top: 100px;
+}
+
+@media (max-width: 767px) {
+  .main__watch-heading {
+    height: 550px;
+  }
+  .main__watch-heading iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+/* awards */
+
+.main__awards-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__awards {
+  margin-top: 100px;
+}
+
+.main__awards-wrapper {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  text-align: center;
+  gap: 28px;
+}
+
+.main__awards-wrapper-award {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 355px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 33px 55px 28px;
+}
+
+.main__awards-wrapper-award h2 {
+  line-height: 1.3;
+  font-size: 18px;
+  color: var(--white-color);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.main__awards-wrapper-award p {
+  color: var(--color-beige);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .main__games-news-wrapper {
+    align-items: center;
+    justify-content: center;
+  }
+}
+/* images */
+
+.main__screenshots {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__screenshots-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.main__screenshots,
+.main__explaination {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.main__screenshots h1 {
+  color: var(--white-color);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2.08px;
+  margin-bottom: 33px;
+}
+
+.main__screenshots-image {
+  width: 349px;
+  overflow: hidden;
+}
+
+.main__screenshots-image img {
+  width: 100%;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.main__screenshots-image img:hover {
+  transform: scale(1.1);
+}
+
+.main__screenshots-play {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.main__screenshots-play img {
+  margin-bottom: 35px;
+}
+
+.main__screenshots-text {
+  width: 730px;
+}
+
+.main__screenshots-text h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--white-color);
+  margin-bottom: 30px;
+}
+.main__screenshots-text p {
+  font-size: 27px;
+  color: var(--white-color);
+  overflow-wrap: break-word;
+  line-height: 1.4;
+}
+
+.main__screenshots-text p span {
+  color: #fc4e73;
+}
+.main__screenshots .first,
+.second,
+.third,
+.fourth,
+.fifth,
+.sixth,
+.seventh {
+  position: absolute;
+}
+
+.main__screenshots .first {
+  top: 110%;
+  right: 20%;
+}
+
+.main__screenshots .second {
+  top: 99%;
+  left: 21%;
+}
+
+.main__screenshots .third {
+  top: 75%;
+  left: 15%;
+}
+
+.main__screenshots .fourth {
+  top: 97%;
+  right: 40%;
+}
+
+.main__screenshots .fifth {
+  top: 75%;
+  left: 25%;
+}
+
+@media (max-width: 1200px) {
+  .main__screenshots-text {
+    width: 80%;
+  }
+  .main__screenshots-text h2 {
+    font-size: 40px;
+  }
+  .main__screenshots-text p {
+    font-size: 19px;
+  }
+  .first,
+  .second,
+  .third,
+  .fourth,
+  .fifth,
+  .sixth,
+  .seventh {
+    display: none;
+  }
+  .main__awards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main__screenshots-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .main__awards-wrapper-award {
+    width: 100%;
+  }
+  .main__awards-wrapper-award h2 {
+    font-size: 12px;
+  }
+  .main__awards-wrapper-award p {
+    font-size: 12px;
+  }
+  .main__awards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .main__screenshots-images {
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    justify-content: center;
+  }
+  .main__screenshots-image {
+    width: 650px;
+  }
+  .main__screenshots-images img {
+    width: 65%;
+  }
+}
+@media (max-width: 625px) {
+  .main__screenshots-images {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.main__explaination p {
+  margin-top: 35px;
+  font-size: 27px;
+  color: var(--white-color);
+}
+.main__explaination p span {
+  font-weight: 700;
+}
+
+.main__explaination-crew-missions,
+.main__explaination-killer-missions {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.main__explaination-killer {
+  margin-top: 100px;
+}
+
+.main__explaination-crew-mission,
+.main__explaination-killer-mission {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 15px;
+}
+
+.main__explaination-crew-mission p,
+.main__explaination-killer-mission p {
+  margin-top: 0;
+  width: 286px;
+  overflow-wrap: break-word;
+  font-size: 18px;
+  line-height: 1.3;
+  text-align: start;
+}
+
+.main__explaination-killer-mission {
+  position: relative;
+  z-index: 100;
+}
+
+.main__explaination-killer-mission .star {
+  position: absolute;
+
+  left: 6%;
+  top: -16%;
+}
+.main__question {
+  margin-top: 100px;
+}
+
+.main__question-mail {
+  width: 40%;
+}
+
+@media (max-width: 1080px) {
+  .main__explaination-crew-missions,
+  .main__explaination-killer-missions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .main__explaination-crew-missions,
+  .main__explaination-killer-missions {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .main__explaination p {
+    font-size: 20px;
+  }
+  .crew-image,
+  .impostor-image {
+    width: 70%;
+  }
+}
+
+@media (max-width: 767px) {
+  .main__question-container {
+    flex-direction: column;
+  }
+  .main__question-faq,
+  .main__question-mail {
+    width: 100%;
+  }
+  .main__question-mail-input-form input {
+    width: 100%;
+  }
+}
+footer {
+  margin-top: 0;
+  background-color: var(--header-color);
+}
