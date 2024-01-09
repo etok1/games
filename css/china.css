@@ -29,62 +29,11 @@ body {
   line-height: 1.3;
 }
 
-.main__inside h1 {
-  font-size: 50px;
-  color: var(--color-text);
-}
-.main__inside-intro {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://www.innersloth.com/wp-content/uploads/2021/11/updatedbanner2.png")
-      center/cover no-repeat;
-  height: 845px;
-}
-
-.main__inside-heading {
-  display: block;
-  padding-top: 25%;
-  padding-left: 5%;
-}
-
-.main__inside-heading h1 {
-  text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
-    1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
-  font-weight: 700;
-  font-size: 50px;
-}
-
-.main__inside-heading h1 span {
-  font-size: 115px;
-}
-
-.main__head {
-  margin-top: 100px;
-}
-
-.main__head-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-text);
-}
-
-.main__head-container h1 {
-  font-size: 45px;
-
-  font-weight: 700;
-  margin-bottom: 50px;
-}
-
-.main__head-container p {
-  font-size: 18px;
-  color: var(--color-text);
-  overflow-wrap: break-word;
-  line-height: 1.5;
-}
-
-.main__head-text {
-  text-align: center;
-  max-width: 735px;
-  margin: 0 auto 38px;
+@media (max-width: 767px) {
+  .main__watch-heading h1 {
+    font-size: 25px;
+  }
+  .main__watch-heading p {
+    font-size: 22px;
+  }
 }

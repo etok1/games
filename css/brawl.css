@@ -58,3 +58,12 @@ header {
   top: -15%;
   left: 5%;
 }
+
+@media (max-width: 767px) {
+  .main__watch-heading h1 {
+    font-size: 25px;
+  }
+  .main__watch-heading p {
+    font-size: 22px;
+  }
+}

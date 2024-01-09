@@ -12,7 +12,7 @@ function displayCard(creator) {
   card.innerHTML = `
     <div class="main__collective-block">
         <div class="main__collective-block-image">
-            <img
+            <img class="animate-on-scroll"
             src="${creator.img}"
             alt="forest"
             />

@@ -185,3 +185,45 @@ header {
 footer {
   background-color: var(--footer-background-color);
 }
+
+@media (max-width: 767px) {
+  .main__allNews-card {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+  }
+  .main__allNews-card-image {
+    text-align: center;
+  }
+  .main__allNews-card-image img {
+    width: 70%;
+  }
+  .main__allNews-card-info h2 {
+    font-size: 20px;
+  }
+  .main__news {
+    height: 623px;
+  }
+  .main__news h1 {
+    padding-top: 15%;
+    font-size: 48px;
+  }
+  .main__allNews-btns {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .main__allNews-btn-btn {
+    align-items: center;
+    justify-content: center;
+  }
+  .main__watch-heading h1 {
+    font-size: 25px;
+  }
+  .main__watch-heading p {
+    font-size: 22px;
+  }
+}

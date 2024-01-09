@@ -429,6 +429,9 @@ header {
   .main__question-container {
     flex-direction: column;
   }
+  .main__question-faq-btn {
+    padding: 20px;
+  }
   .main__question-faq,
   .main__question-mail {
     width: 100%;
